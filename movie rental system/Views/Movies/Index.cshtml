@@ -1,0 +1,65 @@
+﻿@model IEnumerable<movie_rental_system.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="font-family:Verdana;">Movies</h2>
+<p>Choose from a wide selection of movies </p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table style="border:1px solid grey;" class="table">
+    <tr style="font-family:sans-serif; background:darkgrey;font-size:14px;">
+        <th>
+            @Html.DisplayNameFor(model => model.movie_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_age_restriction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_price)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.movie_available)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_age_restriction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_available)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.movie_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.movie_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.movie_id })
+        </td>
+    </tr>
+}
+
+</table>

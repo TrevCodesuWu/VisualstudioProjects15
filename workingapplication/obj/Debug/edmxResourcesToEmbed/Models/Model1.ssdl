@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="factoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="work">
+    <Key>
+      <PropertyRef Name="employee_id" />
+    </Key>
+    <Property Name="employee_id" Type="int" Nullable="false" />
+    <Property Name="employee_name" Type="varchar" MaxLength="20" />
+    <Property Name="employee_job_type" Type="varchar" MaxLength="30" />
+    <Property Name="employee_rate_per_hour" Type="int" />
+    <Property Name="employee_work_days" Type="int" />
+  </EntityType>
+  <EntityContainer Name="factoryModelStoreContainer">
+    <EntitySet Name="work" EntityType="Self.work" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

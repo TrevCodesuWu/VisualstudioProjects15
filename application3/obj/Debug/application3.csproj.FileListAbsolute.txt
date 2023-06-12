@@ -1,0 +1,6 @@
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\application3\bin\Debug\application3.exe.config
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\application3\bin\Debug\application3.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\application3\bin\Debug\application3.pdb
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\application3\obj\Debug\application3.csprojResolveAssemblyReference.cache
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\application3\obj\Debug\application3.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\application3\obj\Debug\application3.pdb

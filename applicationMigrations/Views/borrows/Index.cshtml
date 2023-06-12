@@ -1,0 +1,51 @@
+﻿@model IEnumerable<applicationMigrations.Models.borrow>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.customer.cust_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.borrower_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.borrower_age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.borrower_hometown)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer.cust_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.borrower_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.borrower_age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.borrower_hometown)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.borrow_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.borrow_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.borrow_Id })
+        </td>
+    </tr>
+}
+
+</table>

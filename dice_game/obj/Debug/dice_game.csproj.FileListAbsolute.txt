@@ -1,0 +1,6 @@
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\dice_game\bin\Debug\dice_game.exe.config
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\dice_game\bin\Debug\dice_game.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\dice_game\bin\Debug\dice_game.pdb
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\dice_game\obj\Debug\dice_game.csprojResolveAssemblyReference.cache
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\dice_game\obj\Debug\dice_game.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\dice_game\obj\Debug\dice_game.pdb

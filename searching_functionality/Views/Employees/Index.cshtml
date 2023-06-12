@@ -1,0 +1,67 @@
+﻿@model IEnumerable<searching_functionality.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<form id="formSearch" method="post" style="display:flex;flex-direction:row;justify-content:flex-end;">
+
+     <div class="col-md-1"><b>Employee:</b></div>
+    <div class="col-md-2"><input type="text" id="Emp_name" name="Emp_name" style="border-radius:5px;background:silver;" /></div>
+    <div class="col-md-1"><input type="submit" id="submitsearch" value="Search" class="btn-info" style="border-radius:5px;" /> </div>
+    <div class="col-md-1"><input type="submit" id="resetsearch" value="Reset" class="btn-info"style="border-radius:5px;" /> </div>
+
+</form>
+
+<div style="height:20px;"></div>
+<table class="table" style="font-family:Verdana;">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.depart_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.F_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.age)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.depart_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.F_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.age)
+        </td>
+        <td>
+           <button class="btn-info" style="border-radius:5px;text-decoration-color:white;">@Html.ActionLink("Edit", "Edit", new { id = item.Employee_Id })</button> |
+            <button class="btn-info" style="border-radius:5px;">@Html.ActionLink("Details", "Details", new { id = item.Employee_Id })</button> |
+            <button class="btn-info" style="border-radius:5px">@Html.ActionLink("Delete", "Delete", new { id = item.Employee_Id })</button> |
+        </td>
+    </tr>
+}
+
+</table>

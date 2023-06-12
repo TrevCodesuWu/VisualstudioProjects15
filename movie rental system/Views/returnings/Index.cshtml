@@ -1,0 +1,45 @@
+﻿@model IEnumerable<movie_rental_system.Models.returning>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="font-family:Verdana;">Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table style="border:1px solid grey;" class="table">
+    <tr style="font-family:sans-serif; background:darkgrey;font-size:14px;">
+        <th>
+            @Html.DisplayNameFor(model => model.Rent.rent_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actual_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.late_fee)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rent.rent_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.actual_fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.late_fee)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.returning_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.returning_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.returning_id })
+        </td>
+    </tr>
+}
+
+</table>

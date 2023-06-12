@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="factoryModelStoreContainer" CdmEntityContainer="factoryEntities">
+    <EntitySetMapping Name="works">
+      <EntityTypeMapping TypeName="factoryModel.work">
+        <MappingFragment StoreEntitySet="work">
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+          <ScalarProperty Name="employee_job_type" ColumnName="employee_job_type" />
+          <ScalarProperty Name="employee_rate_per_hour" ColumnName="employee_rate_per_hour" />
+          <ScalarProperty Name="employee_work_days" ColumnName="employee_work_days" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

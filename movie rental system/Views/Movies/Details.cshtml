@@ -1,0 +1,50 @@
+﻿@model movie_rental_system.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_age_restriction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_age_restriction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movie_available)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movie_available)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.movie_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

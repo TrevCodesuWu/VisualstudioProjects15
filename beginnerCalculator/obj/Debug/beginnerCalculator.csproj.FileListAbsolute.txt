@@ -1,0 +1,6 @@
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\beginnerCalculator\bin\Debug\beginnerCalculator.exe.config
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\beginnerCalculator\bin\Debug\beginnerCalculator.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\beginnerCalculator\bin\Debug\beginnerCalculator.pdb
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\beginnerCalculator\obj\Debug\beginnerCalculator.csprojResolveAssemblyReference.cache
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\beginnerCalculator\obj\Debug\beginnerCalculator.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\beginnerCalculator\obj\Debug\beginnerCalculator.pdb

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<RestuarantApplication.Models.Food>
+
+@{
+    ViewBag.Title = "ListFoods";
+}
+<style>
+    th,td {
+        padding:5px 15px; 
+        border:2px solid black; 
+    }
+    th{
+        background-color:darkgrey; 
+
+    }
+    td{
+        background-color:silver; 
+    }
+    
+</style>
+<h2 class="headerFoods">List Of Foods</h2>
+
+<div class="contdiv">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 divdis">
+            <div class="insidediv1">
+               <img src="@item.food_url" alt="image unavailable" />        
+            </div>
+            
+            <div class="insidediv2">
+                <h4 class="desc">@Html.ActionLink("Description", "FoodDetails", "Food", new { id = @item.id }, null)</h4>
+                <h4 class="value">Name: @item.food_name</h4>
+                <h4 class="value">Price: @item.price</h4>
+                <h4 class="value">Category: @item.category.category_name</h4>
+                <button class="delete-btn" data-att="@item.id">Delete</button>
+            </div>    
+        </div>
+    }
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $(".contdiv").on("click", ".delete-btn", function () {
+                var button = $(this); 
+                bootbox.confirm("Do you want to delete this ?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/foodapi/" + button.attr("data-att"),
+                            method: "DELETE",
+                            success: function () {
+                                console.log("it has been done !");
+                                button.parents('.divdis').remove();  // targeting a higher parent . you need to state the class or id of it . 
+                            }
+                        });
+                    }
+                })
+            });
+        }); 
+    </script>
+    }
+
+
+
+
+@*
+    <table class="table table-hover table-bordered table-responsive" >
+        <thead>
+            <tr>
+                <th>Food name</th>
+                <th>Price</th>
+                <th>Category name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td> @item.food_name</td>
+                        <td> @item.price</td>
+                        <td>@item.category.category_name</td>
+                    </tr>
+                }
+
+        </tbody>
+    </table>
+    *@

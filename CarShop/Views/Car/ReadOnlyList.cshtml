@@ -1,0 +1,71 @@
+﻿@model IEnumerable<CarShop.Models.Car>
+
+@{
+    ViewBag.Title = "listofcars";
+}
+<style>
+    h2 {
+        font-family: 'Trebuchet MS';
+        display: flex;
+        justify-content: center;
+    }
+
+    td, th {
+        padding: 5px 15px;
+        border: 2px solid black;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        font-size: 16px;
+    }
+
+    th {
+        background-color: lightgray;
+        font-size: 22px;
+    }
+
+    * {
+        font-family: Dubai;
+    }
+</style>
+
+
+<h2>List of Cars</h2>
+<table id="tableCar">
+    <thead>
+        <tr>
+            <th>Car Name</th>
+            <th>Car Class</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+@section scripts
+    {
+    <script>
+            $(document).ready(function () {      // making the document ready
+               var table = $("#tableCar").DataTable({ // enables page sorting , searching and next page
+                    ajax: {
+                        url: "/api/Cars",
+                        dataSrc: ""
+                          },
+                    columns: [
+                                 {
+                                     data: "name"
+                                 },
+                                 {
+                                     data: "class.car_class"
+
+                                 }
+                             ]
+
+
+                                        });
+                
+            });
+    </script>
+}

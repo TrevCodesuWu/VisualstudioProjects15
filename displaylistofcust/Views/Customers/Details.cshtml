@@ -1,0 +1,30 @@
+﻿@model displaylistofcust.Models.Customer
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+    th,td {
+        border : 1.2px solid black ;
+        padding:5px 15px; 
+        margin:5px; 
+    }
+</style>
+<h2 style="text-transform:uppercase">Details Page</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Address</th>
+    </tr>
+    <tr>
+        <td>@Model.customerName</td>
+        <td>@Model.customerID</td>
+        <td>@Model.customerAddress</td>
+    </tr>
+</table>
+
+<div style="position:absolute;bottom:100px;left:100px; padding:10px 30px; background-color:aquamarine; border-radius:5px; display:flex;justify-content:center; align-items:flex-start; flex-direction: column;">
+    @Html.ActionLink("back to home", "Index", "Home") <br />
+    @Html.ActionLink("list of customers", "listcust", "Customers")
+</div>

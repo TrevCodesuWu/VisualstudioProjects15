@@ -1,0 +1,6 @@
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\acessors\bin\Debug\acessors.exe.config
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\acessors\bin\Debug\acessors.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\acessors\bin\Debug\acessors.pdb
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\acessors\obj\Debug\acessors.csprojResolveAssemblyReference.cache
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\acessors\obj\Debug\acessors.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\acessors\obj\Debug\acessors.pdb

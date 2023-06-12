@@ -1,0 +1,57 @@
+﻿@model IEnumerable<videotutmvc.Models.STOCKITEM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.itemDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.selling)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.selling)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.itemCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.itemCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.itemCode })
+        </td>
+    </tr>
+}
+
+</table>

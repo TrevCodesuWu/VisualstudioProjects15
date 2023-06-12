@@ -1,0 +1,38 @@
+﻿@model Migrations_EF.ViewModels.NewMovieViewModel
+@{
+    ViewBag.Title = "formData";
+}
+
+<h2>Form Data</h2>
+@using (Html.BeginForm("Save", "movies"))
+{
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.movie_name)
+        @Html.TextBoxFor(c => c.Movie.movie_name, new {@class ="form-control"})
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.duration_min)
+        @Html.TextBoxFor(c => c.Movie.duration_min, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.release_date)
+        @Html.TextBoxFor(c => c.Movie.release_date,"{0:d MMM yyyy}", new { @class = "form-control" }) 
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.left_stock)
+        @Html.TextBoxFor(c => c.Movie.left_stock, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Movie.Genre_id)
+        @Html.DropDownListFor(c => c.Movie.Genre_id , new SelectList(Model.GenreList ,"genre_id","genre_name"),"Select Genre",new { @class="form-control"})
+    </div>
+    @Html.HiddenFor(c => c.Movie.movie_id)
+
+    <button class="btn btn-primary" type="submit">Save</button>
+
+}
+

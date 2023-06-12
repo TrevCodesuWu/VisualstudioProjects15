@@ -1,0 +1,32 @@
+﻿@model IEnumerable<GymManagement.Models.UserProfile>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2> List of User Profiles in the database</h2>
+
+<table id="table1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+           <tr>
+               <td>@Html.ActionLink(item.name , "Details", "UserProfile" , new { id = item.id } , null)</td>
+               <td>@item.age</td>
+              
+           </tr>
+        }
+    </tbody>
+</table>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#table1").DataTable(); 
+        });
+    </script>
+    }

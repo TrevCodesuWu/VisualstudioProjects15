@@ -1,0 +1,49 @@
+﻿@model RestuarantApplication.ViewModels.FoodCategoryViewModel
+@{
+    ViewBag.Title = "Form";
+}
+
+<h2>Food Form</h2>
+
+@using (Html.BeginForm("Save","Food"))
+{
+    @Html.ValidationSummary(false)
+
+     <div class="form-group">
+         @Html.LabelFor(c => c.foodvm.food_name)
+         @Html.TextBoxFor(c => c.foodvm.food_name, new { @class = "form-control" })
+         @Html.ValidationMessageFor(c => c.foodvm.food_name)
+     </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.foodvm.country)
+        @Html.TextBoxFor(c => c.foodvm.country, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.foodvm.country)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.foodvm.price)
+        @Html.TextBoxFor(c => c.foodvm.price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.foodvm.price)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.foodvm.food_url)
+        @Html.TextBoxFor(c => c.foodvm.food_url, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.foodvm.food_url)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.foodvm.CategoryId)
+        @Html.DropDownListFor(c => c.foodvm.CategoryId , new SelectList(Model.categoryvm,"id","category_name"),"Select Category", new { @class="form-control"})
+        @Html.ValidationMessageFor(c => c.foodvm.CategoryId)
+    </div>
+
+    @Html.Hidden("foodvm.id", (Model.foodvm != null) ? Model.foodvm.id : 0)
+    @Html.AntiForgeryToken()
+
+    <button class="btn btn-primary" type="submit">Save</button>
+    
+}
+
+@section scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+    }

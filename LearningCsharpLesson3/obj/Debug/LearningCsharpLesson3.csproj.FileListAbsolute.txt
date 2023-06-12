@@ -1,0 +1,6 @@
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningCsharpLesson3\bin\Debug\LearningCsharpLesson3.exe.config
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningCsharpLesson3\bin\Debug\LearningCsharpLesson3.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningCsharpLesson3\bin\Debug\LearningCsharpLesson3.pdb
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningCsharpLesson3\obj\Debug\LearningCsharpLesson3.csprojResolveAssemblyReference.cache
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningCsharpLesson3\obj\Debug\LearningCsharpLesson3.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningCsharpLesson3\obj\Debug\LearningCsharpLesson3.pdb

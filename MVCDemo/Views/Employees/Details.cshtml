@@ -1,0 +1,31 @@
+﻿@model MVCDemo.Models.Employee 
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    td {
+        padding:20px;
+    }
+</style>
+<h2>This is the details view </h2>
+
+<table class="table-bordered table-responsive">
+    <tr>
+        <td>Employee Id :</td>
+        <td>@Model.EmployeeId</td>
+    </tr>
+    <tr>
+        <td>Name :</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Gender :</td>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr>
+        <td>City :</td>
+        <td>@Model.City</td>
+    </tr>
+</table>

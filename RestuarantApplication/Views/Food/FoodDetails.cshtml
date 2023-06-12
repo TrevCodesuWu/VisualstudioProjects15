@@ -1,0 +1,41 @@
+﻿@model RestuarantApplication.Models.Food
+@{
+    ViewBag.Title = "FoodDetails";
+}
+<style>
+    th, td {
+        padding: 5px 15px;
+        border: 2px solid black;
+    }
+
+    th {
+        background-color: darkgrey;
+    }
+
+    td {
+        background-color: silver;
+    }
+</style>
+
+<h2>Food Details</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Food name</th>
+            <th>Price</th>
+            <th>Country</th>
+            <th>Category name</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td> @Model.food_name</td>
+                <td> @Model.price</td>
+                <td>@Model.country</td>
+                <td>@Model.category.category_name</td>
+            </tr>
+    </tbody>
+</table>
+
+
+

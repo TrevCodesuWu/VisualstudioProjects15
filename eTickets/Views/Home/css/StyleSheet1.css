@@ -1,0 +1,268 @@
+﻿* {
+	padding: 0; 
+	margin: 0; 
+	box-sizing: border-box; 
+	user-select: none; 
+
+}
+.navigation {
+	width: 100%; 
+	height:50px; 
+	background: transparent; 
+	position: fixed;  
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center; 
+
+	z-index: 1;
+}
+.listitem { 
+	list-style: none; 
+	padding: 5px 15px;
+	border-radius: 7px; 
+	color: lightgrey; 
+	text-transform: uppercase;  
+     display: inline; 
+     font-weight: 700; 
+     user-select: none; 
+     cursor: pointer; 
+     font-family: Verdana; 
+}
+.unordered {
+	text-decoration: none;
+	margin-right: 50px; 
+}
+.listitem:hover { 
+    background: black; 
+    opacity: 0.7; 
+    color: white; 
+}
+.headerNav {
+	font-size: 30px;  
+	font-family: sans-serif;
+	color: lightgrey;  
+	user-select: none; 
+	cursor: pointer; 
+	margin-left: 50px;  
+}
+.coverup {
+	width: 100%; 
+	height: 50px; 
+	background: darkgreen;  
+	position: relative; 
+	z-index: -1; 
+}
+.sectiongrid {
+	width: 100%; 
+	height: 640px ;  
+	position: relative; 
+	background: darkgreen;   
+    padding: 2% 8%;  
+	display: grid; 
+	grid-template-columns: [col-start] 2fr [col-1] 1fr [col-end]; 
+	grid-template-rows: 60px 1fr 80px ; 
+	grid-template-areas: 
+	"gridheader gridheader"
+	"gridmain gridside"
+	"gridfooter gridfooter"; 
+    grid-gap: 2%;  
+    text-align: center; 
+}
+
+@media screen and (max-width: 650px) {
+	.styling {
+		font-size: 1rem;   
+	}
+	.headerNav {
+		margin-left: 35px; 
+	}
+	.listitem {
+		visibility: hidden; 
+
+	}
+	.sectiongrid{
+		background: limegreen; 
+		grid-template-columns: 1fr; 
+		grid-template-rows: 1fr 3fr 2fr 1fr; 
+		grid-template-areas: 
+		"gridheader"
+		"gridmain"
+		"gridside"
+		"gridfooter"; 
+		grid-gap: 2%;  
+		padding: 3% 10%;   
+	}
+}
+.gridheader {
+	grid-area: gridheader; 
+	background: orange;  
+
+}
+.gridmain {
+	grid-area: gridmain; 
+	background: lightblue;  
+}
+.gridside {
+	grid-area: gridside; 
+	background: maroon;  
+}
+.gridfooter {
+	grid-area: gridfooter; 
+	background: darkorchid;  
+}
+.styling {
+	padding: 5px 30px; 
+	font-family: monospace; 
+	letter-spacing: 0.5px; 
+	font-size: 1rem; 
+	word-spacing: 2px;  
+}
+.sectionc {
+	width: 100%; 
+	height: 100vh; 
+	overflow: hidden; 
+}
+.container {
+	width: 500%; 
+	height: 100vh; 
+	background: orange ;   
+	position: relative; 
+	display: flex; 
+	flex-direction: row;
+
+	animation-name: move; 
+	animation-duration: 12s; 
+	animation-delay: 1s; 
+	animation-iteration-count: infinite;  
+}
+.carousaldiv1 {
+	width: 20%; 
+	height: 100vh; 
+    position: relative;   
+    object-position: right;  
+}
+.image1 {
+	width: 100%; 
+}
+.carousaldiv2 {
+	width: 20%; 
+	height: 100vh;        
+	position: relative; 
+    object-position: right;  
+}
+.image2 {
+	width: 100%; 
+}
+.carousaldiv3 {
+	width: 20%; 
+	height: 100vh;         
+	position: relative; 
+    object-position: right;  
+}
+.image3 {
+	width: 100%; 
+}
+.carousaldiv4 {
+	width: 20%; 
+	height: 100vh; 
+	position: relative;  
+    object-position: right;  
+}
+.image4 {
+	width: 100%; 
+}
+.carousaldiv5 {
+	width: 20%; 
+	height: 100vh;     
+	position: relative; 
+    object-position: right;  
+}
+@keyframes move {
+	20% {
+        left: 0%; 
+	}
+	25% {
+        left: -100%; 
+	}
+    45% {
+    	left: -100%; 
+    }
+	50% {
+		left: -200%; 
+	}
+	70% {
+		left: -200%; 
+	}
+	75% { 
+		left: -300%; 
+	}
+	 95% {
+	 	left: -300%; 
+	 }
+	100% {
+		left: -400%;  
+	}
+}
+.section3 {
+	width: 100%; 
+	height: 100vh;  
+	display: grid; 
+	grid-template-columns: 1fr 2fr; 
+	grid-template-rows: 1fr; 
+    grid-template-areas: 
+    "counter heading"; 
+	background: pink;  
+	grid-gap: 10px; 
+}
+.counter {
+   grid-area: counter; 
+  display: flex; 
+  justify-content: right; 
+  align-items: center;
+  padding-right: 30px; 
+}
+.countercontainer {
+  width: 40%; 
+  height: 100px; 
+  background: skyblue; 
+  border-radius: 5px;  
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;   
+  align-items: center;   
+
+}
+.counterlabel {
+	margin-bottom: 10px; 
+	width: 90%; 
+	height: 25px; 
+	background: grey; 
+	border-radius: 5px; 
+	border: none; 
+}
+.counterbutton {
+ width: 90%; 
+ height: 25px; 
+ border-radius: 5px; 
+ letter-spacing: 2px; 
+ font-family: Verdana; 
+ border: none; 
+ text-transform: uppercase; 
+ color: pink; 
+ transition: all 4s; 
+}
+.counterbutton:hover {
+
+}
+.counterheading {
+	display: flex; 
+	background: skyblue; 
+	color: pink; 
+	letter-spacing: 20px; 
+	font-family: monospace; 
+	font-size: 50px; 
+	align-items: center; 
+	justify-content: left; 
+	padding-left: 30px; 
+	grid-area: heading; 
+}

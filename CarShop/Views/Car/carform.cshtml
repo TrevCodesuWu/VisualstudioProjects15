@@ -1,0 +1,52 @@
+﻿@model CarShop.ViewModels.carClassViewModel
+@{
+    ViewBag.Title = "carform";
+}
+
+<h2>Car Form</h2>
+@using (Html.BeginForm("save","Car"))
+{
+    @Html.ValidationSummary(true,"Fill in the required fields before proceding !")
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Car.name)
+        @Html.TextBoxFor(c => c.Car.name , new { @class ="form-control"})
+        @Html.ValidationMessageFor(c => c.Car.name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Car.model)
+        @Html.TextBoxFor(c => c.Car.model, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Car.model)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Car.price)
+        @Html.TextBoxFor(c => c.Car.price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Car.price)
+    </div>
+    <div class="form-group">
+        @Html.CheckBoxFor(c => c.Car.sunroof)
+        @Html.LabelFor(c => c.Car.sunroof)
+        @Html.ValidationMessageFor(c => c.Car.sunroof)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Car.released)
+        @Html.TextBoxFor(c => c.Car.released, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Car.released)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Car.ClassId)
+        @Html.DropDownListFor(c => c.Car.ClassId, new SelectList(Model.Class,"id","car_class"),"Select Class",new { @class="form-control"})
+        @Html.ValidationMessageFor(c => c.Car.ClassId)
+    </div>
+
+    @Html.Hidden("Car.id",(Model.Car != null) ? Model.Car.id : 0)
+   
+    @Html.AntiForgeryToken()
+    <button class="btn btn-primary" type="submit">Save</button>
+}
+
+@section scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

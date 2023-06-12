@@ -1,0 +1,89 @@
+﻿* {
+    margin:0px; 
+    padding:0px; 
+    box-sizing:border-box; 
+}
+.headerFoods {
+    font-size:30px; 
+    color: black; 
+    font-family:'Freestyle Script'
+}
+td{
+    font-family:Leelawadee; 
+}
+th{
+    font-family:Pristina; 
+    font-size:20px; 
+}
+.contdiv {
+    width:100%; 
+    
+}
+.divdis {
+    border:0.5px solid black; 
+    padding:2px 3px ;
+
+    display:flex; 
+    flex-direction:column ;
+    justify-content:center;  
+
+}
+.insidediv1 {
+    width:100%; 
+    height:160px; 
+    background-color: #0C1222;
+    border:1px solid lightgrey;  
+    font-size:10px;  
+
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+
+}
+
+
+.insidediv2 {
+    width:100%; 
+    height:60px;
+    background-color: #0C1222; 
+    color:white; 
+    font-family:'Trebuchet MS'; 
+   
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center; 
+    align-items:flex-start; 
+}
+.insidediv1:hover ~ .insidediv2  {
+    background-color: #23395d; 
+}
+.insidediv2:hover {
+    background-color:#23395d;
+}
+.value {
+    padding:2px 3px; 
+    margin:0px; 
+    font-size:10px; 
+}
+.desc {
+    padding:2px 3px; 
+    margin:0;  
+
+    font-size:12px; 
+    color:white; 
+    align-self:center;
+}
+img {
+        max-width:95%;
+        max-height:95%;  
+    }
+.delete-btn {
+    width:85px; 
+    height:27px;
+    border-radius:5px; 
+    position:absolute; bottom:20px; right:25px;  
+    border:2px solid black; 
+}
+.delete-btn:hover {
+    background-color:paleturquoise; 
+}

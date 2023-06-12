@@ -1,0 +1,23 @@
+﻿@model GymManagement.Models.UserProfile
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Showing details for @Model.name</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.name</td>
+            <td>@Model.age</td>
+            <td>@Model.gender.gender_name</td>
+        </tr>
+    </tbody>
+</table>

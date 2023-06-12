@@ -1,0 +1,59 @@
+﻿@model APDP201_mvc.Models.stockitem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>stockitem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Selling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Selling)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Item_Code }) |
+    @Html.ActionLink("Back to List", "Index")
+   
+</p>

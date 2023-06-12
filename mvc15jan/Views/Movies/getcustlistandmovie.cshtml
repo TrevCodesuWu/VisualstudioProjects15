@@ -1,0 +1,28 @@
+﻿@model mvc15jan.ViewModels.customerMovie
+@{
+    ViewBag.Title = "get customer list and movie";
+}
+
+<h2>customer list</h2>
+
+
+       <table>
+           <thead>
+               <tr>
+                   <td colspan="2">Cust ID</td>
+                   <td colspan="2">Cust Name</td>
+               </tr>
+           </thead>
+           <tbody>
+                @foreach (var cust in Model.customer)
+                {
+                          <tr>
+                                 <td colspan="2">@cust.customer_id</td>
+                                 <td colspan="2">@cust.customer_name</td>
+                         </tr>
+                }
+           </tbody>
+       </table>
+  
+
+

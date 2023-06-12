@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PracticeGames.Models.Game>
+@{
+    ViewBag.Title = "ListGames";
+}
+<style>
+    table{
+        width:100%; 
+    }
+    th,td {
+        padding:5px 15px; 
+        border:2px solid black; 
+    }
+    th {
+        background-color:lightgrey; 
+        font-size:25px; 
+    }
+</style>
+<h2>List of Games </h2> 
+<button class="btn btn-danger" >@Html.ActionLink("Create", "New", "games")</button>
+@if (!Model.Any())
+{
+    <h3>Hmm...Looks like there is no games in the list as yet </h3>
+
+} else
+{ 
+    <table>
+        <thead>
+            <tr>
+                <th>Game Name</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var items in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(items.game_name, "Edit", "games", new { id = items.game_id },null)</td>
+                    <td>@items.Genre.name</td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+}
+

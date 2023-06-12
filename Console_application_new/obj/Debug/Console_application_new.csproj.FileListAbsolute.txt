@@ -1,0 +1,6 @@
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\Console_application_new\bin\Debug\Console_application_new.exe.config
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\Console_application_new\bin\Debug\Console_application_new.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\Console_application_new\bin\Debug\Console_application_new.pdb
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\Console_application_new\obj\Debug\Console_application_new.csprojResolveAssemblyReference.cache
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\Console_application_new\obj\Debug\Console_application_new.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\Console_application_new\obj\Debug\Console_application_new.pdb

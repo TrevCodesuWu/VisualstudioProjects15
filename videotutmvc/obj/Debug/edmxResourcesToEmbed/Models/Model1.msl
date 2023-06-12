@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WAREHOUSEModelStoreContainer" CdmEntityContainer="WAREHOUSEEntities">
+    <EntitySetMapping Name="STOCKITEMS">
+      <EntityTypeMapping TypeName="WAREHOUSEModel.STOCKITEM">
+        <MappingFragment StoreEntitySet="STOCKITEMS">
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="itemDesc" ColumnName="itemDesc" />
+          <ScalarProperty Name="itemSize" ColumnName="itemSize" />
+          <ScalarProperty Name="itemCost" ColumnName="itemCost" />
+          <ScalarProperty Name="vat" ColumnName="vat" />
+          <ScalarProperty Name="selling" ColumnName="selling" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

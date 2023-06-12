@@ -1,0 +1,6 @@
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningEventListeners\bin\Debug\LearningEventListeners.exe.config
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningEventListeners\bin\Debug\LearningEventListeners.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningEventListeners\bin\Debug\LearningEventListeners.pdb
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningEventListeners\obj\Debug\LearningEventListeners.csprojResolveAssemblyReference.cache
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningEventListeners\obj\Debug\LearningEventListeners.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\LearningEventListeners\obj\Debug\LearningEventListeners.pdb

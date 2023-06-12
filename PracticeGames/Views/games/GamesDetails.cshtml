@@ -1,0 +1,53 @@
+﻿@model PracticeGames.Models.Game
+@{
+    ViewBag.Title = "GamesDetails";
+}
+<style>
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 5px 15px;
+        border: 2px solid black;
+    }
+
+    th {
+        background-color: lightgrey;
+        font-size: 25px;
+
+    }
+    .classone {
+        background-color:limegreen; 
+    }
+</style>
+<h2>Game Details</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Game Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rated</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="classone">@Model.game_id</td>
+            <td>@Model.game_name</td>
+            <td>R @Model.price</td>
+            <td>@Model.rated</td>
+            @if (Model.release_date.HasValue)
+            {
+                <td>@Model.release_date.Value.ToShortDateString()</td>
+            } else
+            {
+                <td>unspecified</td>
+            }
+            <td>@Model.Genre.name</td>
+        </tr>
+    </tbody>
+</table>
+

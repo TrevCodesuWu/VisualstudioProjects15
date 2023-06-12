@@ -1,0 +1,32 @@
+﻿@model GymManagement.ViewModels.User_Gender_ViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New</h2>
+
+@using (Html.BeginForm("Save", "UserProfile"))
+{
+    @Html.ValidationSummary(false)
+    <div class="form-group">
+        @Html.LabelFor(c => c.userprofile.name)
+        @Html.TextBoxFor(c => c.userprofile.name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.userprofile.name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.userprofile.age)
+        @Html.TextBoxFor(c => c.userprofile.age, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.userprofile.age)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.userprofile.genderId)
+        @Html.DropDownListFor(c => c.userprofile.genderId , new SelectList(Model.GenderList,"id","gender_name"), "Select Gender", new { @class="form-control"})
+        @Html.ValidationMessageFor(c => c.userprofile.genderId)
+    </div>
+    @Html.Hidden("userprofile.id" , (Model.userprofile != null) ? Model.userprofile.id : 0)
+    // @Html.Hidden("Car.id", (Model.Car != null) ? Model.Car.id : 0)
+    <button class="btn btn-info" type="submit">Save</button>
+}
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    }

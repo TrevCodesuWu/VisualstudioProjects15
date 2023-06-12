@@ -1,0 +1,22 @@
+﻿@model WebApplication1.Models.Sum
+
+
+@{
+    ViewBag.Title = "Output";
+}
+
+<h2>Adding two numbers</h2>
+@using (Html.BeginForm("Calculate", "Main", FormMethod.Post))
+{
+    <p>Enter Number One : @Html.EditorFor(z => z.num1 )</p>
+   <p> Enter Number Two : @Html.EditorFor(z => z.num2)</p>
+  <p> Answer  : @Html.DisplayFor(z => z.Answer)</p>
+
+  <p></p>
+  <input type="submit" value="Calculate">
+
+}
+
+
+
+

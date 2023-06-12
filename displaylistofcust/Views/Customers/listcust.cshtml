@@ -1,0 +1,61 @@
+﻿@model IEnumerable<displaylistofcust.Models.Customer>
+@{
+    ViewBag.Title = "listcust";
+}
+<style>
+    th,td {
+        margin:5px; 
+        padding:5px 15px; 
+        border:1.2px solid black; 
+    }
+</style>
+
+@if (!Model.Any()) /*This is to check if there is any customers in the list and if there is none this will display*/
+{
+    <h3>Sorry , we do not have any customers yet </h3>
+}
+else
+{
+    <h2>List of Customers :</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Names</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var listcus in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.ActionLink(listcus.customerName, "Details", "Customers", new { id = listcus.customerID }, null)
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+    
+   
+
+
+@*for the next time , find hwo to display error if no customers yet in the list .
+     display each customers details when clicked *@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*<h2>@Html.ActionLink("Details", "Details", "Customers", new { id = 1 }, null)</h2>*@ 

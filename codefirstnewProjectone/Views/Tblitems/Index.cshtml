@@ -1,0 +1,63 @@
+﻿@model IEnumerable<codefirstnewProjectone.Models.Tblitem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Items - Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Cat_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.item_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.item_size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.item_cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.selling)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Cat_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.item_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.item_size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.item_cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.selling)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.item_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.item_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.item_id })
+        </td>
+    </tr>
+}
+
+</table>

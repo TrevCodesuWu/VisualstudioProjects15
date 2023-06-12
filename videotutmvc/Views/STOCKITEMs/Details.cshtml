@@ -1,0 +1,58 @@
+﻿@model videotutmvc.Models.STOCKITEM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>STOCKITEM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.itemDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.selling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.selling)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.itemCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

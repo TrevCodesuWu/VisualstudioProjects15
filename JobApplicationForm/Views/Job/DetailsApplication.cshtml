@@ -1,0 +1,52 @@
+﻿@model JobApplicationForm.Models.JobForm
+@{
+    ViewBag.Title = "DetailsApplication";
+}
+<style>
+    th, td {
+        border: 2px solid black;
+        padding: 5px 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+    }
+
+    th {
+        background-color: darkgrey;
+    }
+</style>
+<h2>Details of Applicant</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Telephone</th>
+            <th>Disabilities</th>
+            @if (Model.dateSubmited.HasValue)
+            {
+                <th>Date Submitted</th>
+            }
+            <th></th>
+            <th>Position</th>
+            <th>Duration(months)</th>
+            <th>Pay</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.personName</td>
+            <td>@Model.address</td>
+            <td>@Model.phoneNumber</td>
+            <td>@Model.anyDisabilities</td>
+            @if (Model.dateSubmited.HasValue)
+            {
+                <td>@Model.dateSubmited</td>
+            }
+            <td></td>
+            <td>@Model.Position.position</td>
+            <td>@Model.Position.durationMonths</td>
+            <td>@Model.Position.pay</td>
+        </tr>
+    </tbody>
+</table>

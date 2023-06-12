@@ -1,0 +1,54 @@
+﻿@model Migrations_EF.Models.Customer
+@{
+    ViewBag.Title = "custInfo";
+}
+<style>
+    th, td {
+        padding:5px 15px; 
+        border:2px solid black; 
+        border-radius:4px; 
+        font-family: 'Trebuchet MS'; 
+    }
+    th{
+        background-color:lightgrey; 
+        font-size:15px; 
+    }
+    td {
+        background-color:darkgrey; 
+        font-size:10px;
+    }
+    
+</style>
+<h2 style="text-decoration:underline; font-size:20px; display:flex;justify-content:center">Customer Information</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Cus.ID</th>
+            <th>Cus.Name</th>
+            <th>Subbed?</th>
+            <th>BirthDate</th>
+            <th>Memb.Type</th>
+            <th>Signupfee</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.id</td>
+            <td>@Model.name</td>
+            <td>@Model.isSubscribedToNewsLetter</td>
+            @if (Model.birthD.HasValue)
+            {
+                <td>@Model.birthD.Value.ToShortDateString()</td>
+            }
+            else
+            {
+                <td style="color:red;">confidential</td>
+            }
+            <td>@Model.Membershiptypes.name</td>
+            <td>@Model.Membershiptypes.signupfee</td>
+        </tr>
+    </tbody>
+</table>
+<br/>
+@Html.ActionLink("Customers", "listofcust", "Customer"); 
+@Html.ActionLink("Back to Home", "Index", "Home")

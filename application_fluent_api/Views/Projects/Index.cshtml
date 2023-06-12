@@ -1,0 +1,45 @@
+﻿@model IEnumerable<application_fluent_api.Models.Project>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Database)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProgLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Database)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProjectId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProjectId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProjectId })
+        </td>
+    </tr>
+}
+
+</table>

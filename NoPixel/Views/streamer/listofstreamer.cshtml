@@ -1,0 +1,50 @@
+﻿@model IEnumerable<NoPixel.Models.Streamers>
+@{
+    ViewBag.Title = "listofstreamer";
+}
+<style>
+    th, td {
+                border: 2px solid black;
+                margin: 5px;
+                padding: 5px 15px;
+           }
+    th {
+        background-color:darkgray; 
+    }
+    #firstd:hover {
+        font-size:1.2em; 
+        text-decoration:none; 
+    
+</style>
+
+@if (!Model.Any())
+{
+    <h3 style="display:flex; justify-content:center; font-style:italic;font-family:'Trebuchet MS'">hmm , looks like we do not have any streamers as yet...</h3>
+}
+else
+{
+
+    <h2 style="display:flex; justify-content:center; padding:10px 0px ; border-radius:5px; margin-bottom:10px; font-family:'Trebuchet MS'">List of Streamers</h2>
+    <p style="color:lightgray"><i>click to view more information...</i></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var st in Model)
+            {
+                <tr>
+                    <td id="firstd">@Html.ActionLink(st.streamer_name, "Details", "streamer", new { id = st.streamer_id }, null)</td>
+                    <td>@st.streamer_username</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}

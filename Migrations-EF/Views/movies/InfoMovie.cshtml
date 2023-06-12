@@ -1,0 +1,65 @@
+﻿@model Migrations_EF.Models.Movie
+@{
+    ViewBag.Title = "InfoMovie";
+}
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        font-family: 'Trebuchet MS';
+        text-shadow: 2px 2px 2px grey;
+    }
+
+    th, td {
+        padding: 8px 21px;
+        border: 2px solid black;
+        font-family: 'Franklin Gothic';
+    }
+
+    th {
+        font-size: 18px;
+        background-color: lightgrey;
+    }
+
+    td {
+        font-size: 14px;
+        background-color: white;
+    }
+
+        td:hover {
+            background-color: silver;
+        }
+</style>
+<h2>Movie Information</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Movie ID</th>
+            <th>Name</th>
+            <th>Duration(min)</th>
+            <th>Stock</th>
+            <th>Released</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.movie_id</td>
+            <td>@Model.movie_name</td>
+            <td>@Model.duration_min</td>
+            <td>@Model.left_stock</td>
+            <td>@Model.release_date.ToShortDateString()</td>
+            <td>@Model.Genre.genre_name</td>
+        </tr>
+    </tbody>
+</table>
+
+@Html.ActionLink("back to movies", "listofmovies", "movies")
+

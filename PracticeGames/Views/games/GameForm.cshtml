@@ -1,0 +1,43 @@
+﻿@model PracticeGames.ViewModels.GenGameViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Save", "games"))
+{
+    @Html.ValidationSummary(true,"Fill in the required fields")
+    <div class="form-group">
+        @Html.LabelFor(c => c.game.game_name)
+        @Html.TextBoxFor(c => c.game.game_name, new { @class = "form-control" } )
+        @Html.ValidationMessageFor(c => c.game.game_name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.game.price)
+        @Html.TextBoxFor(c => c.game.price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.game.price)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.game.rated)
+        @Html.TextBoxFor(c => c.game.rated , new { @class="form-control"})
+        @Html.ValidationMessageFor(c => c.game.rated)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.game.release_date)
+        @Html.TextBoxFor(c => c.game.release_date,"{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.game.release_date)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.game.GenreId)
+        @Html.DropDownListFor(c => c.game.GenreId, new SelectList(Model.GenreList,"id","name"),"Select Genre",new { @class="form-control"})
+        @Html.ValidationMessageFor(c => c.game.GenreId)
+    </div>
+    @Html.HiddenFor(c => c.game.game_id)
+    <button class="btn btn-primary" type="submit">Create</button>
+}
+
+@section scripts
+    {
+       @Scripts.Render("~/bundles/jqueryval")
+    }
+   @*This is how you enable client-side validation . it doesn't send a request to the server when pressed save till the data is correct , doesnt work for custom data annotations . must use jquery to code for that . *@

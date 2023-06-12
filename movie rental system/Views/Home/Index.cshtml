@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .heading {
+        font-family:sans-serif; 
+        font-weight:bold; 
+        letter-spacing:1px; 
+        word-spacing:10px; 
+
+    }
+
+</style>
+
+<div style="background:skyblue; margin-top:20px;" class="jumbotron">
+    <h1 style="font-family:sans-serif;font-weight:bold">Renting movies system</h1>
+
+    <p style="font-family:Verdana; font-style:italic;"class="lead">our customers can rent any movie of their choice from a wide range of genres !</p>
+    <p><a href="~/Controllers/RentsController.cs" style="border:1px solid white;"class="btn btn-info btn-lg">Rent a movie &raquo;</a></p>
+</div>
+
+<div style="margin-left:50px; " class="row">
+
+    <div class="col-md-12">
+        <h2 class="heading">About Us</h2>
+        <p style="font-family:Verdana; font-style:italic;">Join to enjoy exclusive originals as well as popular movies and Tv shows .</p>
+        <p class="para"style="font-family:italic;">@Html.ActionLink("Learn more", "About", "Home")</p>
+    </div>
+
+    <div class="col-md-12">
+        <h2 class="heading">Contact Us</h2>
+        <p style="display:block;font-family:Verdana; font-style:italic;">In need of help ? Our contact us page has all the info you need to get professional help</p>
+        <p class="para"style="display:inline;font-family:italic;">@Html.ActionLink("Learn more", "Contact", "Home")</p>
+    </div>
+
+</div>

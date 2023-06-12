@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="inventorymainModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="Cust_Id" />
+    </Key>
+    <Property Name="Cust_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Cust_Name" Type="varchar" MaxLength="30" />
+    <Property Name="Cust_Surname" Type="varchar" MaxLength="20" />
+    <Property Name="Cust_Addr" Type="varchar" MaxLength="30" />
+    <Property Name="Cust_Cell" Type="varchar" MaxLength="10" />
+    <Property Name="Cust_Bal" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="stockitems">
+    <Key>
+      <PropertyRef Name="Item_Code" />
+    </Key>
+    <Property Name="Item_Code" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Item_desc" Type="varchar" MaxLength="30" />
+    <Property Name="Item_Size" Type="varchar" MaxLength="10" />
+    <Property Name="Item_Cost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Vat" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Selling" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="inventorymainModelStoreContainer">
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stockitems" EntityType="Self.stockitems" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="inventorymainModelStoreContainer" CdmEntityContainer="inventorymainEntities">
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="inventorymainModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="Cust_Id" ColumnName="Cust_Id" />
+          <ScalarProperty Name="Cust_Name" ColumnName="Cust_Name" />
+          <ScalarProperty Name="Cust_Surname" ColumnName="Cust_Surname" />
+          <ScalarProperty Name="Cust_Addr" ColumnName="Cust_Addr" />
+          <ScalarProperty Name="Cust_Cell" ColumnName="Cust_Cell" />
+          <ScalarProperty Name="Cust_Bal" ColumnName="Cust_Bal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stockitems">
+      <EntityTypeMapping TypeName="inventorymainModel.stockitem">
+        <MappingFragment StoreEntitySet="stockitems">
+          <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+          <ScalarProperty Name="Item_desc" ColumnName="Item_desc" />
+          <ScalarProperty Name="Item_Size" ColumnName="Item_Size" />
+          <ScalarProperty Name="Item_Cost" ColumnName="Item_Cost" />
+          <ScalarProperty Name="Vat" ColumnName="Vat" />
+          <ScalarProperty Name="Selling" ColumnName="Selling" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

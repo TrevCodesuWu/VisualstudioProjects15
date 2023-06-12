@@ -1,0 +1,10 @@
+﻿@model IEnumerable<mvc16Jan.Models.Customer>
+@{
+    ViewBag.Title = "listcustomer";
+}
+
+@foreach(var c in Model)
+{
+    @c.cust_name // Add IEnumerable<> when passing a List through the View of a Controller 
+    @c.cust_gender
+}

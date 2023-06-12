@@ -1,0 +1,51 @@
+﻿@model NoPixel.Models.Streamers
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+    th, td {
+        border: 2px solid black;
+        margin: 5px;
+        padding: 5px 15px;
+    }
+
+    th {
+        background-color: darkgray;
+    }
+    #headerDetails{
+        width:100%; 
+        height:50px; 
+        background-color:darkgrey; 
+        font-style:italic; 
+        display:flex; 
+        font-family:'Trebuchet MS'; 
+        border-radius:10px; 
+        justify-content:center; 
+        align-items:center; 
+        margin-bottom:20px; 
+    }
+</style>
+
+<h2 id="headerDetails">Streamer Details</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Content</th>
+            <th>Views(avg)</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td>@Model.streamer_id</td>
+            <td>@Model.streamer_name</td>
+            <td>@Model.streamer_username</td>
+            <td>@Model.streamer_content</td>
+            <td>@Model.streamer_avg_viewers</td>
+        </tr>
+    </tbody>
+</table>
+<p><i>@Html.ActionLink("back to streamer list", "listofstreamer", "streamer")</i></p>

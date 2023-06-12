@@ -1,0 +1,6 @@
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\ATM_machine\bin\Debug\ATM_machine.exe.config
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\ATM_machine\bin\Debug\ATM_machine.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\ATM_machine\bin\Debug\ATM_machine.pdb
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\ATM_machine\obj\Debug\ATM_machine.csprojResolveAssemblyReference.cache
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\ATM_machine\obj\Debug\ATM_machine.exe
+c:\users\trevlin naicker\documents\visual studio 2015\Projects\ATM_machine\obj\Debug\ATM_machine.pdb

@@ -1,0 +1,46 @@
+﻿@model JobApplicationForm.VIewModels.JobPositionViewModel
+@{
+    ViewBag.Title = "form";
+}
+
+<h2>Job Form</h2>
+@using (Html.BeginForm("Save", "Job"))
+{
+    @Html.ValidationSummary(true, "fill in the values")
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.JobForm.personName)
+        @Html.TextBoxFor(c => c.JobForm.personName , new { @class="form-control"})
+        @Html.ValidationMessageFor(c => c.JobForm.personName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.JobForm.address)
+        @Html.TextBoxFor(c => c.JobForm.address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.JobForm.address)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.JobForm.phoneNumber)
+        @Html.TextBoxFor(c => c.JobForm.phoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.JobForm.phoneNumber)
+    </div>
+    <div class="form-group">
+        @Html.CheckBoxFor(c => c.JobForm.anyDisabilities)
+        @Html.LabelFor(c => c.JobForm.anyDisabilities) <br/>
+        @Html.ValidationMessageFor(c => c.JobForm.anyDisabilities)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.JobForm.PositionId)
+        @Html.DropDownListFor(c => c.JobForm.PositionId , new SelectList(Model.ListPosition , "id","position"),"Select a Position", new { @class="form-control"})
+        @Html.ValidationMessageFor(c => c.JobForm.PositionId)
+    </div>
+
+    @Html.HiddenFor(c => c.JobForm.id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-info">Create</button>
+}
+
+@section scripts 
+    {
+     @Scripts.Render("~/bundles/jqueryval")
+    } @*Client side validation is for the client - validation summary will not work for client . its for the server -side
+          *@

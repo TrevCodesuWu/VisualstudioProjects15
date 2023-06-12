@@ -1,0 +1,18 @@
+﻿@model searching_functionality.Models.Department
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="dl-horizontal">
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.depart_name }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
